@@ -1,3 +1,4 @@
+Project Report: Console-Based Chess Game in C++
 1. Introduction
 This project implements a simplified, fully playable chess game using the C++ programming language.
 The primary aim of the project is to apply and demonstrate core Object-Oriented Programming (OOP) principles, including:
