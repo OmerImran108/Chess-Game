@@ -1,68 +1,64 @@
-# ♟ Chess Game in C++
+# ♟️ Chess Game in C++
 
-![Language](https://img.shields.io/badge/Language-C%2B%2B-blue)
+![Language](https://img.shields.io/badge/Language-C%2B%2B17-blue)
 ![Course](https://img.shields.io/badge/Course-Object--Oriented%20Programming-orange)
 ![University](https://img.shields.io/badge/University-FAST--NUCES%20CFD-green)
+![Type](https://img.shields.io/badge/Type-Console%20Based-lightgrey)
 
-A console-based two-player chess game built in C++ using Object-Oriented Programming principles. Developed as a semester project at FAST-NUCES, CFD Campus.
+A fully playable two-player chess game built in C++ for the OOP Lab semester project at FAST-NUCES, CFD Campus. The game runs in the console and enforces real chess rules with move validation, turn management, and piece capture.
 
 ---
 
 ## 👥 Group Members
 
-| Name | GitHub |
-|------|--------|
-| Omer Imran | OmerImran108 |
-| Haroon | Haroon784 |
-| Ahsan  |  Ahsan1   |
+| Name | GitHub | Role |
+|------|--------|------|
+| Omer Imran | OmerImran108 | Board & Game Logic |
+| Haroon | Haroon784 | Piece Classes & Move Validation |
+| Ahsan | — | Position & Integration |
 
 ---
 
-## 🎮 How to Play
-e2 e4       → move piece
-moves e2    → show legal moves
-help        → show commands
-quit        → exit game 
+## ✅ Features
 
-
----
-
-## 🧱 OOP Concepts Applied
-
-**Inheritance**
-Base class `Piece` is inherited by all six piece types — `Pawn`, `Rook`, `Knight`, `Bishop`, `Queen`, `King`.
-
-**Polymorphism**
-Virtual `canMove()` and `symbol()` functions are called at runtime on base class pointers.
-
-**Encapsulation**
-Private data members with public methods in all classes.
-
-**Composition**
-`Board` class contains `Piece` pointers in an 8x8 grid.
+- 8×8 chessboard rendered in the console
+- All 6 chess pieces with correct movement rules
+- Move validation — illegal moves are rejected
+- Piece capture with memory cleanup
+- Legal move listing for any piece
+- Alternating turn system — White moves first
+- Simple command interface
 
 ---
 
-## 📁 File Structure
+## 🎮 Commands
+
+| Command | Action |
+|---------|--------|
+| `e2 e4` | Move piece from e2 to e4 |
+| `moves e2` | List all legal moves for piece at e2 |
+| `help` | Show available commands |
+| `quit` | Exit the game |
+
+---
+
+## 🧱 OOP Concepts
+
+| Concept | How It's Used |
+|---------|--------------|
+| Inheritance | Pawn, Rook, Knight, Bishop, Queen, King all inherit from base `Piece` class |
+| Polymorphism | Virtual `canMove()` called at runtime on base class pointers |
+| Encapsulation | Private data members with controlled public access |
+| Composition | `Board` class owns and manages all `Piece` objects |
+
+---
+
+## 📁 Project Structure
 
 | File | Description |
 |------|-------------|
-| `Piece.h / Piece.cpp` | Base class and all 6 piece subclasses |
-| `Board.h / Board.cpp` | 8x8 grid management |
-| `Game.h / Game.cpp` | Game loop and turn system |
-| `Position.h` | Row/column coordinate structure |
-| `main.cpp` | Entry point |
-
----
-
-## ⚠️ Limitations
-- No checkmate or check detection
-- No castling or en passant
-- No pawn promotion
-
-
-
-
-
-
-
+| `Piece.h / Piece.cpp` | Base class and all 6 derived piece classes |
+| `Board.h / Board.cpp` | 8×8 grid, move execution, board rendering |
+| `Game.h / Game.cpp` | Game loop, turn system, input handling |
+| `Position.h` | Coordinate structure for board positions |
+| `main.cpp` | Program entry point |
